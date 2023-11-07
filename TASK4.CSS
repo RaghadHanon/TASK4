@@ -34,6 +34,7 @@ body{
   width: 100%;
   position: sticky;
   top: 0px;
+  z-index: 100;
 }
 .logo{
   margin-top: .3%;
@@ -55,9 +56,11 @@ body{
   color: azure;
   text-transform:uppercase;
   font-family: 'Roboto', sans-serif;
-  font-size: 100%;
+  font-size: 18px;
 }
-
+.list ul li a:hover{
+  color: #ffc800;
+}
 
 /*portfolio*/
 .portfolio{
@@ -82,20 +85,25 @@ body{
 .items{
   display: flex;
   flex-wrap: wrap;
-  gap:25px 25px;
+  gap:25px;
+}
+.row{
+  display:flex ; 
+  gap:25px;
 }
 .item{
   display: flex;
   flex-wrap: wrap;
   flex-direction:  column;
-  width: 31%;
   background-color: rgb(255, 255, 255);
+  position: relative;
 }
 .item img{
   width: 100%;
-  margin-bottom: 5%;
+  display:block;
 }
 .item h3{
+  margin-top: 5%;
   margin-bottom: 2%;
   font-family: 'Roboto', sans-serif;
   font-size: 150%;
@@ -109,4 +117,27 @@ body{
   font-weight: 500;
   margin-bottom: 5%;
   color: rgb(116, 114, 114);
+}
+.picture{
+  background-color: aliceblue;
+  position: relative;
+}
+.hov{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 200, 0, 0.9);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.hov i{
+  font-size: 400%;
+}
+.hov:hover{
+  opacity: 1;
 }
